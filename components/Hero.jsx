@@ -1,5 +1,6 @@
-import React, { Fragment } from "react";
-import StarsCanvas from "@/components/canvas/Stars";
+"use client";
+import React, { Fragment, useRef, useEffect } from "react";
+import { StarsCanvas, EarthCanvas } from "@components";
 import Image from "next/image";
 
 const Hero = (props) => {
@@ -8,7 +9,7 @@ const Hero = (props) => {
 			<section
 				id="hero"
 				// className="relative h-full min-h-[calc(100vh-80px)]"
-				className="relative h-full min-h-screen -z-10"
+				className="relative h-full min-h-screen flex items-center overflow-hidden"
 			>
 				<StarsCanvas />
 				<div className="absolute -z-10 inset-0 hidden lg:block">
@@ -20,6 +21,32 @@ const Hero = (props) => {
 						alt="Img"
 						priority
 					/>
+				</div>
+				<div className="relative container grid lg:grid-cols-5 grid-cols-1 z-10 lg:mt-0 mt-10">
+					<div className="relative col-span-2 flex items-center z-10">
+						<div className="relative">
+							<h1 className="text-6xl font-semibold text-white">
+								Hi, my
+							</h1>
+							<h1 className="text-5xl my-4 font-semibold text-white">
+								name is Ibrahim
+							</h1>
+
+							<p className="mt-5 mb-14 text-white text-base">
+								I love creating beautiful user experiences.
+							</p>
+
+							<a
+								href="#"
+								className="text-sm rounded-full bg-primary-400 text-white px-5 py-3 font-semibold"
+							>
+								Get in touch
+							</a>
+						</div>
+					</div>
+					<div className="lg:relative absolute col-span-3 h-[60vh]">
+						<EarthCanvas />
+					</div>
 				</div>
 			</section>
 		</Fragment>
