@@ -9,7 +9,7 @@ const Hero = (props) => {
 			<section
 				id="hero"
 				// className="relative h-full min-h-[calc(100vh-80px)]"
-				className="relative h-full min-h-screen flex items-center overflow-hidden"
+				className="relative h-full w-full max-w-full min-h-screen flex items-center overflow-hidden"
 			>
 				<StarsCanvas />
 				<div className="absolute -z-10 inset-0 hidden lg:block">
@@ -22,7 +22,7 @@ const Hero = (props) => {
 						priority
 					/>
 				</div>
-				<div className="relative container grid lg:grid-cols-5 grid-cols-1 z-10 lg:mt-0 mt-10">
+				<div className="relative container grid lg:grid-cols-5 md:grid-cols-4 grid-cols-1 z-10 lg:mt-0 mt-10">
 					<div className="relative col-span-2 flex items-center z-10">
 						<div className="relative">
 							<h1 className="text-6xl font-semibold text-white">
@@ -44,7 +44,7 @@ const Hero = (props) => {
 							</a>
 						</div>
 					</div>
-					<div className="lg:relative absolute col-span-3 h-[60vh]">
+					<div className="md:relative absolute lg:col-span-3 col-span-2 h-[60vh] w-full">
 						<EarthCanvas />
 					</div>
 				</div>
