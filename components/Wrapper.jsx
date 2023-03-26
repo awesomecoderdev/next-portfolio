@@ -1,10 +1,7 @@
 "use client";
-// import "./shared.css";
-// import "./fonts.css";
+
 import { useState, useEffect, Fragment } from "react";
 import Lenis from "@studio-freight/lenis";
-
-import LoadingScreen from "@/components/LoadingScreen/LoadingScreen";
 
 const Wrapper = (props) => {
 	const { children, params } = props;
@@ -38,9 +35,7 @@ const Wrapper = (props) => {
 		<Fragment>
 			{loadingVisisble ? (
 				<Fragment>
-					<div className="flex justify-center items-center">
-						<LoadingScreen setLoadingVisible={setLoadingVisible} />
-					</div>
+					{/* <LoadingScreen setLoadingVisible={setLoadingVisible} /> */}
 				</Fragment>
 			) : null}
 			{children}

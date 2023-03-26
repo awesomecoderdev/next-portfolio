@@ -1,9 +1,10 @@
+import "./globals.css";
+
 import Cookies from "@/components/Cookies";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-import "./globals.css";
 import { Poppins } from "next/font/google";
 import Wrapper from "@/components/Wrapper";
 
@@ -33,6 +34,35 @@ export default function RootLayout(props) {
 					{children}
 					<Cookies />
 				</Wrapper>
+
+				{/* <picture>
+					<source
+						srcset="https://github.githubassets.com/images/modules/dashboard/codespaces/bg.webp"
+						type="image/webp"
+					/>
+					<img
+						src="https://github.githubassets.com/images/modules/dashboard/codespaces/bg.jpg"
+						alt=""
+						width="632"
+						height="500"
+						class="absolute top-0 left-0 w-full"
+						// style="pointer-events: none; z-index: -1; height: 100%; height: 100%; object-fit: cover"
+					/>
+				</picture> */}
+				{/* <picture>
+					<source
+						srcset="https://github.githubassets.com/images/modules/dashboard/galaxy23/bg.webp"
+						type="image/webp"
+					/>
+					<img
+						src="https://github.githubassets.com/images/modules/dashboard/galaxy23/bg.jpg"
+						alt=""
+						width="604"
+						height="452"
+						class="absolute top-0 left-0 w-full"
+						// style="pointer-events: none; z-index: -1; height: 100%; height: 100%; object-fit: cover"
+					/>
+				</picture> */}
 			</body>
 		</html>
 	);
