@@ -5,7 +5,8 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 const Earth = () => {
-	const earth = useGLTF("./planet/scene.gltf");
+	// const earth = useGLTF("./planet/scene.gltf");
+	const earth = useGLTF("./earth/scene.gltf");
 
 	return (
 		<mesh>
@@ -21,7 +22,7 @@ const Earth = () => {
 			<pointLight intensity={8} />
 			<primitive
 				object={earth.scene}
-				scale={3}
+				scale={2}
 				position-y={0}
 				rotation-y={0}
 			/>
@@ -43,6 +44,7 @@ const EarthCanvas = () => {
 				far: 200,
 				position: [-4, 3, 6],
 			}}
+			legacy={true}
 		>
 			{/* <CanvasLoader /> */}
 			<Suspense fallback={null}>

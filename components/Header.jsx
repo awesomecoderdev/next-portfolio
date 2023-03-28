@@ -12,14 +12,9 @@ export default function Header(props) {
 		<Fragment>
 			<header className="w-full absolute top-0 z-20">
 				<div className="w-full container relative flex flex-col px-6 py-8 mx-auto">
-					<nav className="md:flex md:items-center md:justify-between">
+					<nav className="md:flex md:items-center md:justify-between ">
 						<div className="flex items-center justify-between">
 							<Link href="/" className="text-2xl font-semibold">
-								{/* <img
-									className="w-auto h-6 sm:h-7"
-									src="https://merakiui.com/images/full-logo.svg"
-									alt=""
-								/> */}
 								<span className="text-transparent bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 dark:from-teal-200 dark:via-indigo-300 dark:to-sky-500">
 									Awesome
 								</span>
@@ -77,8 +72,8 @@ export default function Header(props) {
 						<div
 							className={`${
 								toggle
-									? "translate-x-0 opacity-100 "
-									: "opacity-0 translate-x-full"
+									? "translate-x-0 opacity-100 block "
+									: "opacity-0 translate-x-full hidden"
 							} absolute inset-x-0 z-20 w-full px-6 py-8 mt-8 space-y-6 transition-all duration-300 ease-in-out bg-white dark:bg-gray-900 top-16 md:bg-transparent md:dark:bg-transparent md:mt-0 md:p-0 md:top-0 md:relative md:w-auto md:opacity-100 md:translate-x-0 md:space-y-0 md:-mx-6 md:flex md:items-center`}
 						>
 							<a

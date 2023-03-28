@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, Suspense } from "react";
-import { Color } from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
@@ -28,7 +27,7 @@ const Stars = (props) => {
 			>
 				<PointMaterial
 					transparent
-					color={new Color(255, 255, 255)}
+					color="#ffffff"
 					size={0.002}
 					sizeAttenuation={true}
 					depthWrite={false}
@@ -45,7 +44,7 @@ const StarsCanvas = ({ opacity }) => {
 				opacity ? "opacity-100" : "opacity-0"
 			}`}
 		>
-			<Canvas camera={{ position: [0, 0, 1] }}>
+			<Canvas camera={{ position: [0, 0, 1] }} legacy={true}>
 				<Suspense fallback={null}>
 					<Stars />
 				</Suspense>

@@ -16,7 +16,7 @@ const Hero = (props) => {
 			<section
 				id="hero"
 				// className="relative h-full min-h-[calc(100vh-80px)]"
-				className="relative h-full w-full max-w-full min-h-screen flex items-center overflow-hidden "
+				className="relative h-screen w-full items-center overflow-hidden"
 			>
 				<StarsCanvas opacity={opacity} />
 				<div
@@ -36,6 +36,7 @@ const Hero = (props) => {
 						priority
 					/>
 				</div>
+
 				<div className="relative container grid lg:grid-cols-5 md:grid-cols-4 grid-cols-1 z-10 lg:mt-0 mt-10">
 					<div className="relative col-span-2 flex items-center z-10">
 						<div className="relative">
@@ -59,14 +60,14 @@ const Hero = (props) => {
 						</div>
 					</div>
 					<div className="md:relative absolute lg:col-span-3 col-span-2 h-[60vh] w-full">
-						{/* <EarthCanvas /> */}
+						<EarthCanvas />
 						{/* <VehicleCanvas /> */}
 					</div>
 				</div>
-			</section>
 
-			<div className="absolute -bottom-6 w-screen h-56 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
-			<div className="absolute -bottom-6 w-screen h-48 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
+				<div className="absolute -bottom-6 w-full h-56 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
+				<div className="absolute -bottom-6 w-full h-48 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
+			</section>
 		</Fragment>
 	);
 };

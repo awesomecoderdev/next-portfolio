@@ -27,7 +27,7 @@ export default function RootLayout(props) {
 	return (
 		<html lang="en">
 			<body
-				className={`antialiased text-slate-500 dark:text-slate-400  bg-white dark:bg-slate-900 h-full min-h-screen ${poppins.className}`}
+				className={`antialiased text-slate-500 dark:text-slate-400  bg-white dark:bg-slate-900 ${poppins.className}`}
 			>
 				<Wrapper>
 					<Header {...props} />
