@@ -49,6 +49,9 @@ const Hero = (props) => {
 					</div>
 				</div>
 			</section>
+
+			<div className="absolute -bottom-0 w-screen h-56 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
+			<div className="absolute -bottom-0 w-screen h-56 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
 		</Fragment>
 	);
 };
