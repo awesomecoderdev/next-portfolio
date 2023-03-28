@@ -50,8 +50,8 @@ const Hero = (props) => {
 				</div>
 			</section>
 
-			<div className="absolute -bottom-0 w-screen h-56 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
-			<div className="absolute -bottom-0 w-screen h-56 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
+			<div className="absolute -bottom-0 w-screen h-36 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
+			<div className="absolute -bottom-0 w-screen h-20 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
 		</Fragment>
 	);
 };
