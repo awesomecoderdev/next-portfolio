@@ -1,18 +1,32 @@
 "use client";
-import React, { Fragment, useRef, useEffect } from "react";
-import { StarsCanvas, EarthCanvas } from "@components";
+import React, { Fragment, useRef, useEffect, useState } from "react";
+import { StarsCanvas, EarthCanvas, VehicleCanvas } from "@components";
 import Image from "next/image";
 
 const Hero = (props) => {
+	const [opacity, setOpacity] = useState(false);
+	useEffect(() => {
+		setTimeout(() => {
+			setOpacity(true);
+		}, 1000);
+	}, []);
+
 	return (
 		<Fragment>
 			<section
 				id="hero"
 				// className="relative h-full min-h-[calc(100vh-80px)]"
-				className="relative h-full w-full max-w-full min-h-screen flex items-center overflow-hidden"
+				className="relative h-full w-full max-w-full min-h-screen flex items-center overflow-hidden "
 			>
-				<StarsCanvas />
-				<div className="absolute -z-10 inset-0 hidden lg:block">
+				<StarsCanvas opacity={opacity} />
+				<div
+					className={`absolute -z-10 inset-0 hidden lg:block transition-all duration-700 ${
+						opacity ? "opacity-100" : "opacity-0"
+					}`}
+				>
+					<VehicleCanvas />
+				</div>
+				<div className="absolute -z-10 inset-0 hidden lg:block ">
 					<Image
 						src={"/assets/img/herobg.png"}
 						fill={true}
@@ -45,13 +59,14 @@ const Hero = (props) => {
 						</div>
 					</div>
 					<div className="md:relative absolute lg:col-span-3 col-span-2 h-[60vh] w-full">
-						<EarthCanvas />
+						{/* <EarthCanvas /> */}
+						{/* <VehicleCanvas /> */}
 					</div>
 				</div>
 			</section>
 
-			<div className="absolute -bottom-0 w-screen h-36 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
-			<div className="absolute -bottom-0 w-screen h-20 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
+			<div className="absolute -bottom-6 w-screen h-56 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
+			<div className="absolute -bottom-6 w-screen h-48 bg-gradient-to-b from-black/0 to-slate-900 z-10 "></div>
 		</Fragment>
 	);
 };

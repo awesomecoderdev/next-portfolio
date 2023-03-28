@@ -23,9 +23,10 @@ import Car from "./Car";
 const Vehicle = () => {
 	return (
 		<>
-			<OrbitControls target={[0, 0.35, 0]} maxPolarAngle={1.45} />
+			{/* <OrbitControls target={[0, 0.35, 0]} maxPolarAngle={1.45} /> */}
 
-			<PerspectiveCamera makeDefault fov={50} position={[3, 2, 5]} />
+			{/* <PerspectiveCamera makeDefault fov={50} position={[3, 2, 5]} /> */}
+			<PerspectiveCamera makeDefault fov={90} position={[2, 1, 6]} />
 
 			<color args={[0, 0, 0]} attach="background" />
 
@@ -72,7 +73,12 @@ const Vehicle = () => {
 			<Rings /> */}
 
 			<EffectComposer>
-				{/* <DepthOfField focusDistance={0.0035} focalLength={0.01} bokehScale={3} height={480} /> */}
+				<DepthOfField
+					focusDistance={0.0035}
+					focalLength={0.01}
+					bokehScale={3}
+					height={480}
+				/>
 				<Bloom
 					blendFunction={BlendFunction.ADD}
 					intensity={1.3} // The bloom intensity.

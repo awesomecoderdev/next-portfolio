@@ -38,9 +38,13 @@ const Stars = (props) => {
 	);
 };
 
-const StarsCanvas = () => {
+const StarsCanvas = ({ opacity }) => {
 	return (
-		<div className="w-full h-auto absolute inset-0 z-[-1]">
+		<div
+			className={`w-full h-auto absolute inset-0 z-[-1] transition-all duration-700 ${
+				opacity ? "opacity-100" : "opacity-0"
+			}`}
+		>
 			<Canvas camera={{ position: [0, 0, 1] }}>
 				<Suspense fallback={null}>
 					<Stars />

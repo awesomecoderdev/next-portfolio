@@ -11,6 +11,7 @@ const Car = () => {
 
 	useEffect(() => {
 		// gltf.scene.scale.set(0.005, 0.005, 0.005);
+		gltf.scene.scale.set(1, 1, 1.5);
 		gltf.scene.position.set(0, -0.035, 0);
 		gltf.scene.traverse((object) => {
 			if (object instanceof Mesh) {
@@ -23,8 +24,8 @@ const Car = () => {
 
 	useFrame((state, delta) => {
 		let t = state.clock.getElapsedTime();
-		let group = gltf.scene.children[0].children[0];
-		console.log("group", group);
+		let group = gltf.scene.children[0].children[0].children[0];
+		// console.log("group", group);
 		// group.children[0].rotation.x = t * 2;
 		// group.children[1].rotation.x = t * 2;
 		// group.children[2].rotation.x = t * 2;
